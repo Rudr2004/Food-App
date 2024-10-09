@@ -1,0 +1,28 @@
+ .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+ }
+ 
+ .logo{
+    width: 154px;
+    color: tomato;
+    font-family: 'Pacifico', cursive;
+}
+
+.profile{
+    width: 40px;
+}
+
+@media (max-width:1050px) {
+     .logo{
+        width: 144.1px;
+    }
+}
+
+@media (max-width:900px) {
+     .logo{
+        width: 120px;
+    }
+}
