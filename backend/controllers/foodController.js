@@ -1,4 +1,4 @@
-import foodModel from "../models/foodmodel.js";
+import foodModel from "../models/foodModel.js";
 import express from "express";
 import multer from "multer";
 import bodyParser from "body-parser";
