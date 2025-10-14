@@ -21,6 +21,15 @@ app.use(
   })
 );
 
+app.use(
+  "/api/cart",
+  proxy("http://localhost:7000", {
+    proxyReqPathResolver: (req) => {
+      return `/api/cart${req.url}`;
+    },
+  })
+);
+
 // Default route
 app.get("/", (req, res) => {
   res.send("API Gateway is running");

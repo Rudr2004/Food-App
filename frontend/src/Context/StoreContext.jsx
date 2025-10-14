@@ -15,14 +15,14 @@ const StoreContextProvider = (props) => {
             setCartitems((pre) => ({ ...pre, [itemId]: pre[itemId] + 1 }))
         }
         if (token) {
-            await axios.post(url + "/api/cart/add", { itemId }, { headers: { token } })
+            await axios.post("http://localhost:5000/api/cart/add", { itemId }, { headers: { token } })
         }
     }
 
     const removeCart = async (itemId) => {
         setCartitems((pre) => ({ ...pre, [itemId]: pre[itemId] - 1 }));
         if (token) {
-            await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } })
+            await axios.post("http://localhost:5000/api/cart/remove", { itemId }, { headers: { token } })
         }
     }
 
